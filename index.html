@@ -22,6 +22,19 @@
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem;margin:2rem 0}
     .gallery img{width:100%;border-radius:16px;object-fit:cover;height:240px}
     footer{border-top:1px solid rgba(255,255,255,.1);padding:1rem 0;color:var(--muted)}
+      /* Carousel */
+    .carousel{position:relative; margin:1rem 0;}
+    .car-track{list-style:none; padding:0; margin:0; position:relative; overflow:hidden; height:420px; border-radius:16px; box-shadow:var(--shadow);}
+    .car-slide{position:absolute; inset:0; opacity:0; transition:opacity .35s ease;}
+    .car-slide.current{opacity:1;}
+    .car-slide img{width:100%; height:100%; object-fit:cover; display:block;}
+    .car-btn{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.45); color:#fff; border:0; width:42px; height:42px; border-radius:999px; cursor:pointer; font-size:26px; display:grid; place-items:center}
+    .car-btn:hover{background:rgba(0,0,0,.6)}
+    .car-btn.prev{left:10px}
+    .car-btn.next{right:10px}
+    .car-dots{display:flex; gap:.4rem; justify-content:center; margin-top:.6rem}
+    .car-dots .dot{width:10px; height:10px; border-radius:999px; border:1px solid rgba(255,255,255,.6); background:transparent}
+    .car-dots .dot.current{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-color:transparent}
   </style>
 </head>
 <body>
@@ -64,20 +77,33 @@
       </div>
     </section>
 
-<section id="gallery">
-  <h2>Salon Gallery</h2>
-  <div class="gallery">
-    <img src="IMG_0223.jpg" alt="Magic Touch plaza sign near Planet Fitness" />
-    <img src="IMG_0222.jpg" alt="Magic Touch storefront with threading sign" />
-    <img src="IMG_0216.jpg" alt="Reception desk area inside the salon" />
-    <img src="IMG_0217.jpg" alt="Threading chairs and mirrors" />
-    <img src="IMG_0219.jpg" alt="Waiting area with chairs and window" />
-    <img src="IMG_0220.jpg" alt="Salon interior with lighting and mirrors" />
-    <img src="IMG_0218.jpg" alt="Business card for Magic Touch Eyebrow Threading" />
-    <img src="IMG_0221.jpg" alt="Price list for threading services" />
-  </div>
-</section>
-
+    <section id="gallery" aria-label="Salon photos">
+      <h2>Salon Gallery</h2>
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Magic Touch gallery">
+        <button class="car-btn prev" aria-label="Previous slide">‹</button>
+        <ul class="car-track" aria-live="polite">
+          <li class="car-slide current" aria-roledescription="slide" aria-label="1 of 8"><img src="IMG_0223.jpg" alt="Plaza sign near Planet Fitness"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="2 of 8"><img src="IMG_0222.jpg" alt="Storefront with threading sign"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="3 of 8"><img src="IMG_0216.jpg" alt="Reception desk area"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="4 of 8"><img src="IMG_0217.jpg" alt="Threading chairs and mirrors"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="5 of 8"><img src="IMG_0219.jpg" alt="Waiting area seating"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="6 of 8"><img src="IMG_0220.jpg" alt="Interior with lighting"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="7 of 8"><img src="IMG_0218.jpg" alt="Business card"/></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="8 of 8"><img src="IMG_0221.jpg" alt="Price list board"/></li>
+        </ul>
+        <button class="car-btn next" aria-label="Next slide">›</button>
+        <div class="car-dots" role="tablist" aria-label="Slide thumbnails">
+          <button class="dot current" role="tab" aria-selected="true" aria-controls="slide1" tabindex="0"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide2" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide3" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide4" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide5" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide6" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide7" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-controls="slide8" tabindex="-1"></button>
+        </div>
+      </div>
+    </section>
 
     <section id="contact">
       <h2>Contact</h2>
@@ -93,5 +119,38 @@
     <div class="container">© <span id="year"></span> Magic Touch Eyebrow Threading. All rights reserved.</div>
   </footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>
+    (function(){
+      const track = document.querySelector('.car-track');
+      if(!track) return;
+      const slides = Array.from(track.children);
+      const prevBtn = document.querySelector('.car-btn.prev');
+      const nextBtn = document.querySelector('.car-btn.next');
+      const dots = Array.from(document.querySelectorAll('.car-dots .dot'));
+      let index = 0;
+      function update(i){
+        slides[index].classList.remove('current');
+        dots[index].classList.remove('current');
+        dots[index].setAttribute('aria-selected','false');
+        dots[index].tabIndex = -1;
+        index = (i + slides.length) % slides.length;
+        slides[index].classList.add('current');
+        dots[index].classList.add('current');
+        dots[index].setAttribute('aria-selected','true');
+        dots[index].tabIndex = 0;
+      }
+      nextBtn.addEventListener('click',()=>update(index+1));
+      prevBtn.addEventListener('click',()=>update(index-1));
+      dots.forEach((d,i)=>d.addEventListener('click',()=>update(i)));
+      // Keyboard support
+      document.addEventListener('keydown', (e)=>{
+        if(e.key==='ArrowRight') update(index+1);
+        if(e.key==='ArrowLeft') update(index-1);
+      });
+      // Swipe (basic)
+      let sx=0; track.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+      track.addEventListener('touchend',e=>{ const dx=(e.changedTouches[0].clientX - sx); if(Math.abs(dx)>40) update(index + (dx<0?1:-1)); });
+    })();
+  </script>
 </body>
 </html>
