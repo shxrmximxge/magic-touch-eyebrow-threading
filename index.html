@@ -22,19 +22,33 @@
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem;margin:2rem 0}
     .gallery img{width:100%;border-radius:16px;object-fit:cover;height:240px}
     footer{border-top:1px solid rgba(255,255,255,.1);padding:1rem 0;color:var(--muted)}
-      /* Carousel */
-    .carousel{position:relative; margin:1rem 0;}
-    .car-track{list-style:none; padding:0; margin:0; position:relative; overflow:hidden; height:420px; border-radius:16px; box-shadow:var(--shadow);}
-    .car-slide{position:absolute; inset:0; opacity:0; transition:opacity .35s ease;}
-    .car-slide.current{opacity:1;}
-    .car-slide img{width:100%; height:100%; object-fit:cover; display:block;}
-    .car-btn{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.45); color:#fff; border:0; width:42px; height:42px; border-radius:999px; cursor:pointer; font-size:26px; display:grid; place-items:center}
-    .car-btn:hover{background:rgba(0,0,0,.6)}
-    .car-btn.prev{left:10px}
-    .car-btn.next{right:10px}
-    .car-dots{display:flex; gap:.4rem; justify-content:center; margin-top:.6rem}
-    .car-dots .dot{width:10px; height:10px; border-radius:999px; border:1px solid rgba(255,255,255,.6); background:transparent}
-    .car-dots .dot.current{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-color:transparent}
+/* Carousel */
+.carousel{position:relative; margin:1rem 0;}
+.car-track{
+  list-style:none; padding:0; margin:0;
+  position:relative; overflow:hidden;
+  height:420px; border-radius:16px; box-shadow:var(--shadow);
+}
+.car-slide{position:absolute; inset:0; opacity:0; transition:opacity .35s ease;}
+.car-slide.current{opacity:1;}
+.car-slide img{width:100%; height:100%; object-fit:cover; display:block;}
+
+/* Buttons — make sure they sit ABOVE the slides */
+.car-btn{
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(0,0,0,.45); color:#fff; border:0;
+  width:42px; height:42px; border-radius:999px; cursor:pointer;
+  font-size:26px; display:grid; place-items:center;
+  z-index: 5;                 /* <-- add this */
+}
+.car-btn:hover{background:rgba(0,0,0,.6)}
+.car-btn.prev{left:10px; z-index: 5;}  /* <-- add this (extra-safe) */
+.car-btn.next{right:10px}
+
+.car-dots{display:flex; gap:.4rem; justify-content:center; margin-top:.6rem}
+.car-dots .dot{width:10px; height:10px; border-radius:999px; border:1px solid rgba(255,255,255,.6); background:transparent}
+.car-dots .dot.current{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-color:transparent}
+
   </style>
 </head>
 <body>
