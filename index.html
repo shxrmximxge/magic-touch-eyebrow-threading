@@ -3,231 +3,257 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Magic Touch Eyebrow Threading — Perfect Arches, Every Time</title>
-  <meta name="description" content="Magic Touch Eyebrow Threading in Fair Oaks, CA offers expert eyebrow threading, tinting, and facial hair removal. Walk-ins welcome. Student Tuesday: 25% off with valid ID." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-/* —— GRAND, FEMININE BEAUTY THEME —— */
-:root{
-  --blush:#FCE9F1;        /* page background */
-  --rose:#E6A4B4;         /* primary accent */
-  --mauve:#C889B6;        /* secondary accent */
-  --lav:#B195D0;          /* tertiary accent */
-  --plum:#4A2C5D;         /* deep accent for contrast */
-  --ink:#2C1E2E;          /* main text */
-  --muted:#6E5566;        /* secondary text */
-  --card:#FFFFFF;         /* surfaces */
-  --radius:22px;
-  --shadow-s:0 8px 18px rgba(74,44,93,.18);
-  --shadow-m:0 14px 30px rgba(74,44,93,.20);
-  --border:1px solid rgba(186,143,182,.22);
-}
+  <meta name="description" content="Magic Touch Eyebrow Threading in Fair Oaks, CA. Precise eyebrow threading, tinting, and full-face hair removal. Walk-ins welcome. Student Tuesday: 25% off with valid student ID." />
 
-/* Base */
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:"Poppins", system-ui, sans-serif;
-  color:var(--ink);
-  background:
-    radial-gradient(900px 500px at -10% -10%, rgba(230,164,180,.28), transparent 60%),
-    radial-gradient(900px 600px at 110% 10%, rgba(177,149,208,.22), transparent 60%),
-    var(--blush);
-  line-height:1.65;
-}
-a{color:var(--plum); text-decoration:none}
-a:hover{text-decoration:underline}
-.container{width:min(1100px,92%);margin:auto}
+  <!-- Elegant fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-/* Header (grand + glossy) */
-header{
-  position:sticky; top:0; z-index:10;
-  background: linear-gradient(90deg, var(--rose), var(--lav));
-  color:#fff; border-bottom:1px solid rgba(255,255,255,.35);
-  box-shadow: var(--shadow-m);
-  padding:.9rem 0; /* tweak this to make taller/shorter */
-}
-.nav-inner{display:flex;justify-content:space-between;align-items:center}
-.nav-inner h1{
-  margin:0; font-family:"Playfair Display", serif; font-weight:700;
-  font-size:2rem; letter-spacing:.8px; text-transform:uppercase;
-  text-shadow:0 2px 10px rgba(0,0,0,.15);
-}
-nav a{color:#fff;margin-left:1.1rem;font-weight:600;opacity:.95}
-nav a:hover{opacity:1}
+  <style>
+  /* —— GRAND, FEMININE BEAUTY THEME —— */
+  :root{
+    --blush:#FCE9F1;        /* page background */
+    --rose:#E6A4B4;         /* primary accent */
+    --mauve:#C889B6;        /* secondary accent */
+    --lav:#B195D0;          /* tertiary accent */
+    --plum:#4A2C5D;         /* deep accent for contrast */
+    --ink:#2C1E2E;          /* main text */
+    --muted:#6E5566;        /* secondary text */
+    --card:#FFFFFF;         /* surfaces */
+    --radius:22px;
+    --shadow-s:0 8px 18px rgba(74,44,93,.18);
+    --shadow-m:0 14px 30px rgba(74,44,93,.20);
+    --border:1px solid rgba(186,143,182,.22);
+  }
 
-/* Buttons (pill + glow) */
-.btn{
-  background: linear-gradient(135deg, var(--rose), var(--lav));
-  border:0; border-radius:999px; padding:.9rem 1.3rem;
-  color:#fff; font-weight:700; cursor:pointer; box-shadow:var(--shadow-s);
-  transition: transform .15s ease, filter .15s ease;
-}
-.btn:hover{transform:translateY(-2px); filter:brightness(1.06)}
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:"Poppins", system-ui, sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(900px 500px at -10% -10%, rgba(230,164,180,.28), transparent 60%),
+      radial-gradient(900px 600px at 110% 10%, rgba(177,149,208,.22), transparent 60%),
+      var(--blush);
+    line-height:1.65;
+  }
+  a{color:var(--plum); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{width:min(1100px,92%);margin:auto}
 
-/* Hero (wow factor) */
-.hero{
-  display:grid; grid-template-columns:1fr 1fr; gap:2.2rem; align-items:center;
-  padding:3.6rem 0; border-radius:var(--radius);
-  background: linear-gradient(180deg, rgba(230,164,180,.12), rgba(177,149,208,.10));
-  box-shadow: var(--shadow-s);
-}
-.hero h1,.hero h2{
-  font-family:"Playfair Display", serif; color:var(--plum);
-  margin:.2rem 0; font-size:2.6rem;
-  animation:fadeUp 1s ease .05s both;
-}
-.hero p{color:var(--muted); font-size:1.1rem; max-width:90%; animation:fadeUp .9s ease .1s both}
-.hero img{width:100%; border-radius:var(--radius); box-shadow:var(--shadow-m);}
+  /* Header (glossy) */
+  header{
+    position:sticky; top:0; z-index:10;
+    background: linear-gradient(90deg, var(--rose), var(--lav));
+    color:#fff; border-bottom:1px solid rgba(255,255,255,.35);
+    box-shadow: var(--shadow-m);
+    padding:.9rem 0; /* make smaller or larger here */
+  }
+  .nav-inner{display:flex;justify-content:space-between;align-items:center}
+  .nav-inner h1{
+    margin:0; font-family:"Playfair Display", serif; font-weight:700;
+    font-size:2rem; letter-spacing:.8px; text-transform:uppercase;
+    text-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  nav a{color:#fff;margin-left:1.1rem;font-weight:600;opacity:.95}
+  nav a:hover{opacity:1}
 
-/* Services (premium menu) */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem;margin-top:1rem}
-.card{
-  background:linear-gradient(145deg,#fff 0%, #fdf6fa 100%);
-  border:var(--border); border-radius:24px; padding:1.2rem; text-align:center;
-  box-shadow:var(--shadow-s);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.card:hover{transform:translateY(-6px); box-shadow:0 18px 34px rgba(230,164,180,.28)}
-.card h3{margin:.2rem 0 0; font-weight:700; color:var(--plum)}
-.price{
-  display:inline-block; margin-top:.5rem; padding:.38rem .72rem; border-radius:12px;
-  font-weight:800; color:#fff;
-  background:linear-gradient(135deg,var(--rose),var(--lav));
-  box-shadow:0 4px 10px rgba(177,149,208,.28);
-}
+  /* Buttons (pill + glow) */
+  .btn{
+    background: linear-gradient(135deg, var(--rose), var(--lav));
+    border:0; border-radius:999px; padding:.9rem 1.3rem;
+    color:#fff; font-weight:700; cursor:pointer; box-shadow:var(--shadow-s);
+    transition: transform .15s ease, filter .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px); filter:brightness(1.06)}
 
-/* Gallery Slideshow (recolored) */
-.carousel{position:relative;margin:1.6rem 0}
-.car-track{
-  list-style:none;padding:0;margin:0;position:relative;overflow:hidden;
-  height:420px;border-radius:16px;border:var(--border);
-  box-shadow:var(--shadow-m); background:#0002;
-}
-.car-slide{position:absolute; inset:0; opacity:0; transition:opacity .35s ease}
-.car-slide.current{opacity:1}
-.car-slide img{width:100%;height:100%;object-fit:cover;display:block}
-.car-btn{
-  position:absolute; top:50%; transform:translateY(-50%);
-  background: rgba(74,44,93,.86); color:#fff; border:0;
-  width:44px; height:44px; border-radius:50%; cursor:pointer;
-  font-size:26px; display:grid; place-items:center; z-index:5; box-shadow:var(--shadow-s);
-}
-.car-btn:hover{background: rgba(200,137,182,1)}
-.car-btn.prev{left:10px}
-.car-btn.next{right:10px}
-.car-dots{display:flex; gap:.45rem; justify-content:center; margin-top:.7rem}
-.car-dots .dot{
-  width:10px; height:10px; border-radius:50%;
-  border:1px solid rgba(74,44,93,.28); background:transparent;
-}
-.car-dots .dot.current{background:linear-gradient(135deg,var(--rose),var(--lav)); border-color:transparent}
+  /* Hero (bigger, airier) */
+  .hero{
+    display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:center;
+    padding:5rem 3rem; border-radius:var(--radius);
+    background: linear-gradient(180deg, rgba(230,164,180,.15), rgba(177,149,208,.12));
+    box-shadow: var(--shadow-m);
+  }
+  .hero h1{
+    font-family:"Playfair Display", serif; color:var(--plum);
+    font-size:3rem; letter-spacing:1px; text-transform:uppercase;
+    margin:.2rem 0 .3rem 0; line-height:1.1;
+    animation:fadeUp .8s ease .02s both;
+  }
+  .hero h1 span{
+    display:block; font-family:"Poppins",sans-serif; font-weight:500;
+    font-size:1.2rem; text-transform:none; letter-spacing:3px;
+    color:var(--mauve); margin-top:.25rem;
+  }
+  .hero h2{
+    font-family:"Playfair Display", serif; color:var(--plum);
+    font-size:2rem; margin:.8rem 0 .4rem 0;
+    animation:fadeUp .9s ease .08s both;
+  }
+  .hero p{color:var(--muted); font-size:1.05rem; max-width:90%; animation:fadeUp .9s ease .12s both}
+  .hero img{width:100%; border-radius:var(--radius); box-shadow:var(--shadow-m); animation:fadeUp 1s ease .1s both}
 
-/* Footer (elegant) */
-footer{
-  text-align:center; padding:1.4rem 0; margin-top:2rem; color:#fff;
-  background: linear-gradient(90deg, var(--lav), var(--mauve));
-  border-top-left-radius:var(--radius); border-top-right-radius:var(--radius);
-  box-shadow:var(--shadow-s); letter-spacing:.4px;
-}
+  /* Services (premium menu) */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem;margin-top:1rem}
+  .card{
+    background:linear-gradient(145deg,#fff 0%, #fdf6fa 100%);
+    border:var(--border); border-radius:24px; padding:1.2rem; text-align:center;
+    box-shadow:var(--shadow-s);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{transform:translateY(-6px); box-shadow:0 18px 34px rgba(230,164,180,.28)}
+  .card h3{margin:.2rem 0 0; font-weight:700; color:var(--plum)}
+  .price{
+    display:inline-block; margin-top:.5rem; padding:.38rem .72rem; border-radius:12px;
+    font-weight:800; color:#fff;
+    background:linear-gradient(135deg,var(--rose),var(--lav));
+    box-shadow:0 4px 10px rgba(177,149,208,.28);
+  }
 
-/* Animations */
-@keyframes fadeUp{from{opacity:0; transform:translateY(28px)} to{opacity:1; transform:none}}
+  /* Gallery Slideshow */
+  .carousel{position:relative;margin:1.6rem 0}
+  .car-track{
+    list-style:none;padding:0;margin:0;position:relative;overflow:hidden;
+    height:420px;border-radius:16px;border:var(--border);
+    box-shadow:var(--shadow-m); background:#0002;
+  }
+  .car-slide{position:absolute; inset:0; opacity:0; transition:opacity .35s ease}
+  .car-slide.current{opacity:1}
+  .car-slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .car-btn{
+    position:absolute; top:50%; transform:translateY(-50%);
+    background: rgba(74,44,93,.86); color:#fff; border:0;
+    width:44px; height:44px; border-radius:50%; cursor:pointer;
+    font-size:26px; display:grid; place-items:center; z-index:5; box-shadow:var(--shadow-s);
+  }
+  .car-btn:hover{background: rgba(200,137,182,1)}
+  .car-btn.prev{left:10px}
+  .car-btn.next{right:10px}
+  .car-dots{display:flex; gap:.45rem; justify-content:center; margin-top:.7rem}
+  .car-dots .dot{
+    width:10px; height:10px; border-radius:50%;
+    border:1px solid rgba(74,44,93,.28); background:transparent;
+  }
+  .car-dots .dot.current{background:linear-gradient(135deg,var(--rose),var(--lav)); border-color:transparent}
 
-/* Mobile */
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr; padding:2.2rem 0}
-  .nav-inner h1{font-size:1.7rem}
-}
-</style>
+  /* Footer (elegant) */
+  footer{
+    text-align:center; padding:1.4rem 0; margin-top:2rem; color:#fff;
+    background: linear-gradient(90deg, var(--lav), var(--mauve));
+    border-top-left-radius:var(--radius); border-top-right-radius:var(--radius);
+    box-shadow: var(--shadow-s); letter-spacing:.4px;
+  }
 
+  /* Animations */
+  @keyframes fadeUp{from{opacity:0; transform:translateY(28px)} to{opacity:1; transform:none}}
+
+  /* Mobile */
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr; padding:2.4rem 1.2rem}
+    .nav-inner h1{font-size:1.7rem}
+  }
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="container nav-inner">
       <h1>Magic Touch Eyebrow Threading</h1>
-      <nav><a href="#services">Services </a> | <a href="#gallery">Gallery </a> | <a href="#contact">Contact </a></nav>
+      <nav>
+        <a href="#services">Services</a> |
+        <a href="#gallery">Gallery</a> |
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div>
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="hero-text">
+        <h1>MAGIC TOUCH <span>eyebrow threading</span></h1>
         <h2>Perfect Arches, Every Time</h2>
         <p>Professional eyebrow threading, tinting, and full-face hair removal in Fair Oaks, CA. Walk-ins welcome — clean, gentle, and precise every visit.</p>
         <p><strong>Student Tuesday:</strong> 25% off with valid student ID!</p>
-        <a class="btn" href="tel:+19162657515">Call (916) 265-7515</a>
+        <a class="btn" href="tel:+19165916051">Call (916) 591-6051</a>
       </div>
-      <img 
-  src="IMG_0218.jpg" 
-  alt="Magic Touch Eyebrow Threading" 
-  style="width:100%; border-radius:20px; height:340px; object-fit:cover;"
->
-
+      <img src="IMG_0218.jpg" alt="Magic Touch business card" />
     </section>
 
-    <section id="services">
-      <h2>Services & Pricing</h2>
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Services & Pricing</h2>
       <div class="cards">
-        <div class="card"><h3>Eyebrows</h3><p class="price">$14</p></div>
-        <div class="card"><h3>Eyebrow Tint</h3><p class="price">$10</p></div>
-        <div class="card"><h3>Eyebrow + Upper Lip</h3><p class="price">$20</p></div>
-        <div class="card"><h3>Upper Lip</h3><p class="price">$7</p></div>
-        <div class="card"><h3>Chin</h3><p class="price">$8</p></div>
-        <div class="card"><h3>Cheeks</h3><p class="price">$10</p></div>
-        <div class="card"><h3>Sideburns</h3><p class="price">$10</p></div>
-        <div class="card"><h3>Neck</h3><p class="price">$10</p></div>
-        <div class="card"><h3>Full Face</h3><p class="price">$40</p></div>
-        <div class="card"><h3>Full Face + Neck</h3><p class="price">$45</p></div>
-        <div class="card"><h3>Half Face</h3><p class="price">$30</p></div>
-        <div class="card"><h3>Half Face + Neck</h3><p class="price">$35</p></div>
-        <div class="card"><h3>Underarms</h3><p class="price">$20</p></div>
-        <div class="card"><h3>Arms (below elbow)</h3><p class="price">$40</p></div>
-        <div class="card"><h3>Legs (below knee)</h3><p class="price">$60</p></div>
+        <div class="card"><h3>Eyebrows</h3><span class="price">$14</span></div>
+        <div class="card"><h3>Eyebrow Tint</h3><span class="price">$10</span></div>
+        <div class="card"><h3>Eyebrow + Upper Lip</h3><span class="price">$20</span></div>
+        <div class="card"><h3>Upper Lip</h3><span class="price">$7</span></div>
+        <div class="card"><h3>Chin</h3><span class="price">$8</span></div>
+        <div class="card"><h3>Cheeks</h3><span class="price">$10</span></div>
+        <div class="card"><h3>Sideburns</h3><span class="price">$10</span></div>
+        <div class="card"><h3>Neck</h3><span class="price">$10</span></div>
+        <div class="card"><h3>Full Face</h3><span class="price">$40</span></div>
+        <div class="card"><h3>Full Face + Neck</h3><span class="price">$45</span></div>
+        <div class="card"><h3>Half Face</h3><span class="price">$30</span></div>
+        <div class="card"><h3>Half Face + Neck</h3><span class="price">$35</span></div>
+        <div class="card"><h3>Underarms</h3><span class="price">$20</span></div>
+        <div class="card"><h3>Arms (below elbow)</h3><span class="price">$40</span></div>
+        <div class="card"><h3>Legs (below knee)</h3><span class="price">$60</span></div>
       </div>
     </section>
 
+    <!-- GALLERY / SLIDESHOW -->
     <section id="gallery" aria-label="Salon photos">
       <h2>Salon Gallery</h2>
       <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Magic Touch gallery">
         <button class="car-btn prev" aria-label="Previous slide">‹</button>
         <ul class="car-track" aria-live="polite">
-          <li class="car-slide current" aria-roledescription="slide" aria-label="1 of 7"><img src="IMG_0223.jpg" alt="Plaza sign near Planet Fitness"/></li>
-          <li class="car-slide" aria-roledescription="slide" aria-label="2 of 7"><img src="IMG_0222.jpg" alt="Storefront with threading sign"/></li>
-          <li class="car-slide" aria-roledescription="slide" aria-label="3 of 7"><img src="IMG_0216.jpg" alt="Reception desk area"/></li>
-          <li class="car-slide" aria-roledescription="slide" aria-label="4 of 7"><img src="IMG_0217.jpg" alt="Threading chairs and mirrors"/></li>
-          <li class="car-slide" aria-roledescription="slide" aria-label="5 of 7"><img src="IMG_0219.jpg" alt="Waiting area seating"/></li>
-          <li class="car-slide" aria-roledescription="slide" aria-label="6 of 7"><img src="IMG_0220.jpg" alt="Interior with lighting"/></li>
-          <li class="car-slide" aria-roledescription="slide" aria-label="7 of 7"><img src="IMG_0218.jpg" alt="Business card"/></li>
+          <li class="car-slide current" aria-roledescription="slide" aria-label="1 of 8"><img src="IMG_0223.jpg" alt="Plaza sign near Planet Fitness"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="2 of 8"><img src="IMG_0222.jpg" alt="Storefront with threading sign"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="3 of 8"><img src="IMG_0216.jpg" alt="Reception desk area"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="4 of 8"><img src="IMG_0217.jpg" alt="Threading chairs and mirrors"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="5 of 8"><img src="IMG_0219.jpg" alt="Waiting area seating"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="6 of 8"><img src="IMG_0220.jpg" alt="Interior with lighting"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="7 of 8"><img src="IMG_0218.jpg" alt="Business card"></li>
+          <li class="car-slide" aria-roledescription="slide" aria-label="8 of 8"><img src="IMG_0221.jpg" alt="Price list board"></li>
         </ul>
         <button class="car-btn next" aria-label="Next slide">›</button>
-        <div class="car-dots" role="tablist" aria-label="Slide thumbnails">
-          <button class="dot current" role="tab" aria-selected="true" aria-controls="slide1" tabindex="0"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-controls="slide2" tabindex="-1"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-controls="slide3" tabindex="-1"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-controls="slide4" tabindex="-1"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-controls="slide5" tabindex="-1"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-controls="slide6" tabindex="-1"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-controls="slide7" tabindex="-1"></button>
+        <div class="car-dots" role="tablist" aria-label="Slide dots">
+          <button class="dot current" role="tab" aria-selected="true" tabindex="0"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
+          <button class="dot" role="tab" aria-selected="false" tabindex="-1"></button>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/xDy28FMvaWF4rdjf8" target="_blank">4818 San Juan Ave, Fair Oaks, CA 95628</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+19162657515">(916) 265-7515</a></p>
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/xDy28FMvaWF4rdjf8" target="_blank" rel="noopener">4818 San Juan Ave, Fair Oaks, CA 95628</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+19165916051">(916) 591-6051</a></p>
       <p><strong>Email:</strong> <a href="mailto:magictoucheyebrow@gmail.com">magictoucheyebrow@gmail.com</a></p>
-      <p><strong>Hours:</strong> Mon–Sat 10:30 am – 7 pm • Closed Sunday</p>
+      <p><strong>Hours:</strong> Mon–Sat 10:30 am – 7:00 pm • Closed Sunday</p>
       <p>Walk-ins welcome • Free plaza parking</p>
     </section>
+
   </main>
 
   <footer>
-    <div class="container">© <span id="year"></span> Magic Touch Eyebrow Threading. All rights reserved.</div>
+    © <span id="year"></span> Magic Touch Eyebrow Threading. All rights reserved.
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+  <!-- JS: auto year, slideshow controls, keyboard & swipe -->
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     (function(){
       const track = document.querySelector('.car-track');
       if(!track) return;
@@ -236,12 +262,15 @@ footer{
       const nextBtn = document.querySelector('.car-btn.next');
       const dots = Array.from(document.querySelectorAll('.car-dots .dot'));
       let index = 0;
+
       function update(i){
         slides[index].classList.remove('current');
         dots[index].classList.remove('current');
         dots[index].setAttribute('aria-selected','false');
         dots[index].tabIndex = -1;
+
         index = (i + slides.length) % slides.length;
+
         slides[index].classList.add('current');
         dots[index].classList.add('current');
         dots[index].setAttribute('aria-selected','true');
@@ -250,14 +279,19 @@ footer{
       nextBtn.addEventListener('click',()=>update(index+1));
       prevBtn.addEventListener('click',()=>update(index-1));
       dots.forEach((d,i)=>d.addEventListener('click',()=>update(i)));
+
       // Keyboard support
       document.addEventListener('keydown', (e)=>{
         if(e.key==='ArrowRight') update(index+1);
         if(e.key==='ArrowLeft') update(index-1);
       });
-      // Swipe (basic)
+
+      // Swipe support
       let sx=0; track.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
-      track.addEventListener('touchend',e=>{ const dx=(e.changedTouches[0].clientX - sx); if(Math.abs(dx)>40) update(index + (dx<0?1:-1)); });
+      track.addEventListener('touchend',e=>{
+        const dx=(e.changedTouches[0].clientX - sx);
+        if(Math.abs(dx)>40) update(index + (dx<0?1:-1));
+      });
     })();
   </script>
 </body>
