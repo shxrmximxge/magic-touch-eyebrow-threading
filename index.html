@@ -42,57 +42,64 @@
   a:hover{text-decoration:underline}
   .container{width:min(1100px,92%);margin:auto}
 
-/* Header (glossy) */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: linear-gradient(90deg, var(--rose), var(--lav));
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,.35);
-  box-shadow: var(--shadow-m);
-  padding: .9rem 0; /* make smaller or larger here */
-}
+  /* Smooth scroll + anchor offset so sticky header doesn't cover sections */
+  html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 112px; }  /* desktop header height */
+  @media (max-width:900px){
+    section[id] { scroll-margin-top: 88px; } /* smaller mobile header */
+  }
 
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  /* Header (glossy) */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(90deg, var(--rose), var(--lav));
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.35);
+    box-shadow: var(--shadow-m);
+    padding: .9rem 0; /* make smaller or larger here */
+  }
 
-/* Make the title tappable / clickable */
-.nav-inner h1 a {
-  color: #fff;
-  text-decoration: none;
-}
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.nav-inner h1 a:hover {
-  opacity: 0.9;
-}
+  /* Make the title tappable / clickable */
+  .nav-inner h1 a {
+    color: #fff;
+    text-decoration: none;
+  }
 
-/* Header title with two lines */
-.nav-inner h1{
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 1.9rem;        /* adjust size here */
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  color: #fff;
-  line-height: 1.05;        /* tighter line gap */
-}
+  .nav-inner h1 a:hover {
+    opacity: 0.9;
+  }
 
-/* The small line under it */
-.nav-inner h1 span{
-  display: block;           /* puts it on the next line */
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: .95rem;        /* smaller subtitle */
-  letter-spacing: 3px;
-  text-transform: none;     /* keep normal case */
-  color: rgba(255,255,255,.92);
-  margin-top: .18rem;
-}
+  /* Header title with two lines */
+  .nav-inner h1{
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 1.9rem;        /* adjust size here */
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.05;        /* tighter line gap */
+  }
+
+  /* The small line under it */
+  .nav-inner h1 span{
+    display: block;           /* puts it on the next line */
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: .95rem;        /* smaller subtitle */
+    letter-spacing: 3px;
+    text-transform: none;     /* keep normal case */
+    color: rgba(255,255,255,.92);
+    margin-top: .18rem;
+  }
 
   nav a{color:#fff;margin-left:1.1rem;font-weight:600;opacity:.95}
   nav a:hover{opacity:1}
