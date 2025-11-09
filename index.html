@@ -42,15 +42,34 @@
   a:hover{text-decoration:underline}
   .container{width:min(1100px,92%);margin:auto}
 
-  /* Header (glossy) */
-  header{
-    position:sticky; top:0; z-index:10;
-    background: linear-gradient(90deg, var(--rose), var(--lav));
-    color:#fff; border-bottom:1px solid rgba(255,255,255,.35);
-    box-shadow: var(--shadow-m);
-    padding:.9rem 0; /* make smaller or larger here */
-  }
-  .nav-inner{display:flex;justify-content:space-between;align-items:center}
+/* Header (glossy) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, var(--rose), var(--lav));
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  box-shadow: var(--shadow-m);
+  padding: .9rem 0; /* make smaller or larger here */
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Make the title tappable / clickable */
+.nav-inner h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-inner h1 a:hover {
+  opacity: 0.9;
+}
+
 /* Header title with two lines */
 .nav-inner h1{
   margin: 0;
@@ -177,16 +196,18 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="container nav-inner">
-      <h1>MAGIC TOUCH <span>Eyebrow Threading</span></h1>
-      <nav>
-        <a href="#services">Services</a> |
-        <a href="#gallery">Gallery</a> |
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container nav-inner">
+    <h1>
+      <a href="index.html">MAGIC TOUCH <span>Eyebrow Threading</span></a>
+    </h1>
+    <nav>
+      <a href="#services">Services</a> |
+      <a href="#gallery">Gallery</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <main class="container">
 
