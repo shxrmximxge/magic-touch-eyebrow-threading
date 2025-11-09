@@ -51,11 +51,30 @@
     padding:.9rem 0; /* make smaller or larger here */
   }
   .nav-inner{display:flex;justify-content:space-between;align-items:center}
-  .nav-inner h1{
-    margin:0; font-family:"Playfair Display", serif; font-weight:700;
-    font-size:2rem; letter-spacing:.8px; text-transform:uppercase;
-    text-shadow:0 2px 10px rgba(0,0,0,.15);
-  }
+/* Header title with two lines */
+.nav-inner h1{
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.9rem;        /* adjust size here */
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.05;        /* tighter line gap */
+}
+
+/* The small line under it */
+.nav-inner h1 span{
+  display: block;           /* puts it on the next line */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: .95rem;        /* smaller subtitle */
+  letter-spacing: 3px;
+  text-transform: none;     /* keep normal case */
+  color: rgba(255,255,255,.92);
+  margin-top: .18rem;
+}
+
   nav a{color:#fff;margin-left:1.1rem;font-weight:600;opacity:.95}
   nav a:hover{opacity:1}
 
